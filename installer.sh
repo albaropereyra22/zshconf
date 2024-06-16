@@ -3,13 +3,13 @@
 if [ "X-h" = "X$1" ];
 then
   tee<<EOF;
-TODO help stuff.
+usage: $0 h:
 EOF
   exit 0;
 fi
 
 # Variables
-repoUrl="https://github.com/albaropereyra/zshconf";
+repoUrl="https://github.com/albaropereyra22/zshconf";
 fileName=${repoUrl##*/};
 personalZshrcFile="${HOME}/.personalZshrc";
 
