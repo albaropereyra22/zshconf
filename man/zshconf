@@ -1,0 +1,16 @@
+.\" Manpage for zshConf beta.
+.\" Contact 2AlbaroPereyra@gmail.com to report bugs.
+.TH man 1 "14 June 2021" "0.07" "zshconf beta man page"
+.SH NAME
+zshconf \- used to update zsh settings.
+.SH SYNOPSIS
+usage: sh installer.sh
+.SH DESCRIPTION
+Use zshconf to update your zsh settings.
+.SH OPTIONS
+.SH SEE ALSO
+emacs(1), zsh(1), mosh(1), builtin(1)
+.SH BUGS
+
+.SH AUTHOR
+Albaro Pereyra (2AlbaroPereyra@gmail.com)
