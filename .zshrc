@@ -43,6 +43,8 @@ HIST_STAMPS="mm/dd/yyyy";
 export LANG="en_US.UTF-8";
 export MAILDIR="/var/mail/$(whoami)";
 export TMPDIR="$HOME/tmp";
+# If this is not set zenburn looks funny.
+export TERM=xterm-256color;
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -108,7 +110,7 @@ function cd {
 # # pkg install bat | apt-get install bat | brew install bat
 # # Notice: bat does not include cat's -v option, you may
 # # have to use hexdump to find invisible charaters.
-# alias cat="bat"
+# alias cat="catbat"
 
 # Functions and hacks from the GNU essentials book
 # https://shop.fsf.org/books-docs/introduction-command-line
@@ -135,4 +137,4 @@ function orth () {
 # as well as aliases to ssh into other hosts.
 #source .personalZshrc
 # At the very end I execute a script.
-#sh bin/startCLI.sh
+#sh ~/bin/startCLI.sh
