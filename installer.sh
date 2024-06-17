@@ -12,6 +12,9 @@ fi
 repoUrl="https://github.com/albaropereyra22/zshconf";
 fileName=${repoUrl##*/};
 personalZshrcFile="${HOME}/.personalZshrc";
+uname=$(uname -r)
+WSL2=${uname##*-}
+WSL2=${WSL2%% *}
 
 if [ "X$(uname -s)" = "XDarwin" ];
 then
@@ -30,16 +33,20 @@ then
     # Install zsh
     brew install zsh;
   fi
+  git clone $repoUrl ${HOME}/${fileName};
+  mv ${HOME}/${fileName}/.zshrc ${HOME}/.zshrc;
+elif[ "X$WSL2" = "XWSL2" ];
+  echo "WSL2"
 fi
-
+echo "$WSL2"
 if [ ! -e ${HOME}/.oh-my-zsh ];
 then
   # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 fi
 
-git clone $repoUrl ${HOME}/${fileName};
-mv ${HOME}/${fileName}/.zshrc ${HOME}/.zshrc;
-touch $personalZshrcFile
-rm -rf ${HOME}/${fileName};
+# git clone $repoUrl ${HOME}/${fileName};
+# mv ${HOME}/${fileName}/.zshrc ${HOME}/.zshrc;
+# touch $personalZshrcFile
+# rm -rf ${HOME}/${fileName};
 printf "ZSH conf has been updated.\n";
