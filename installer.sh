@@ -21,10 +21,10 @@ then
   # -s returns 0 if found otherwise 1
   which -s brew;
   # $? exit status of previous command
-  if [ $? != 0 ];
+  if [ "X1" = "X$?" ];
   then
     # Install Homebrew
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
   brew update;
   brew upgrade;
@@ -40,8 +40,9 @@ then
   sudo apt-get upgrade;
   sudo apt install bat;
   mv ${HOME}/${fileName}/.zshrc$WSL2 ${HOME}/.zshrc;
-  touch $personalZshrcFile
+  
 fi
+touch $personalZshrcFile
 rm -rf ${HOME}/${fileName};
 if [ ! -e ${HOME}/.oh-my-zsh ];
 then
