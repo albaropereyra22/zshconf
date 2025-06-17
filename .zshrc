@@ -71,9 +71,9 @@ function cd {
 # #MAC OSX settings
 
 # Only root has access to manipulate the httpd process.
-# alias httpd="sudo httpd";
+alias httpd="sudo httpd";
 # The following requires installation of drogon
-# alias dg="drogon_ctl";
+alias dg="drogon_ctl";
 
 
 # # Make ifconfig more Windows-e
@@ -101,12 +101,12 @@ function cd {
 # # The following setting need special requirements
 
 # # pkg install emacs25 | apt-get install emacs | brew install emacs
-# export EDITOR="emacs";
-# alias e="emacs";
+export EDITOR="emacs";
+alias e="emacs";
 # # pkg install bat | apt-get install bat | brew install bat
 # # Notice: bat does not include cat's -v option, you may
 # # have to use hexdump to find invisible charaters.
-# alias cat="catbat"
+alias cat="catbat"
 
 # Functions and hacks from the GNU essentials book
 # https://shop.fsf.org/books-docs/introduction-command-line
