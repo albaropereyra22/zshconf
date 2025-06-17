@@ -33,6 +33,7 @@ then
     # Install zsh
     brew install zsh;
   fi
+  #TODO install bat.
   mv ${HOME}/${fileName}/.zshrc ${HOME}/.zshrc;
 elif [ "X$WSL2" = "XWSL2" ];
 then
