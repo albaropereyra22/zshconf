@@ -106,7 +106,7 @@ alias e="emacs";
 # # pkg install bat | apt-get install bat | brew install bat
 # # Notice: bat does not include cat's -v option, you may
 # # have to use hexdump to find invisible charaters.
-alias cat="catbat"
+alias cat="bat"
 
 # Functions and hacks from the GNU essentials book
 # https://shop.fsf.org/books-docs/introduction-command-line
