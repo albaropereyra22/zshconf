@@ -41,6 +41,7 @@ HIST_STAMPS="mm/dd/yyyy";
 
 # You may manually need to set the LANG var
 export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
 export MAILDIR="/var/mail/$(whoami)";
 export TMPDIR="$HOME/tmp";
 # If this is not set zenburn looks funny.
@@ -56,15 +57,15 @@ source $ZSH/oh-my-zsh.sh;
 
 
 # Personal favorites
-alias ls="ls -GlAhF";
+alias ls="ls -GlAhF --color";
 
 function cd {
   # if cd does not have an argument its default behaviour is to, go home
   if [ -z "$1" ];
   then
-    builtin cd ~ && ls -GlAhF;
+    builtin cd ~ && ls -GlAhF --color;
   else
-    builtin cd $* && ls -GlAhF;
+    builtin cd $* && ls -GlAhF --color;
   fi
 }
 
